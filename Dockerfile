@@ -1,7 +1,8 @@
 # https://hub.docker.com/r/cwaffles/openpose
 FROM nvidia/cuda:10.0-cudnn7-devel
 
-RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list && \ apt-get clean
+RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+RUN  apt-get clean
 
 #get deps
 RUN apt-get update && \
